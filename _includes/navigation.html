@@ -1,0 +1,14 @@
+<div class="nav-grid">
+  <div class="header-holder">
+    <img src="img/header.png" class="header-img"/>
+    <span class="header-title">EX NIHILO</span>
+  </div>
+  <nav class="header-nav">
+    <a href="/" class="{% if page.url == "/" %}selected{% endif %}">Home</a>
+    <a href="/team.html" class="{% if page.url == "/team.html" %}selected{% endif %}">Team</a>
+    <a href="/exhibition.html" class="{% if page.url == "/exhibition.html" %}selected{% endif %}">Exhibition</a>
+    <a href="/catalogue.html" class="{% if page.url == "/catalogue.html" %}selected{% endif %}">Catalogue</a>
+    <a href="/artists.html" class="{% if page.url == "/artists.html" %}selected{% endif %}">Artists</a>
+    <a href="/contact.html" class="{% if page.url == "/contact.html" %}selected{% endif %}">Contact</a>
+  </nav>
+</div>

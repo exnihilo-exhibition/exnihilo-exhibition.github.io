@@ -1,0 +1,192 @@
+body {
+	background-color: black;
+	font-family: 'Courier New', Courier, monospace;
+  color: white;
+  padding-top: 8em;
+  padding-bottom: 8em;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.nav-grid {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.header-holder {
+  position: relative;
+}
+
+.header-img {
+  width: 18em;
+  height: 18em;
+}
+
+.header-title {
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  font-size: 3em;
+  line-height: 18rem;
+}
+
+.header-nav {
+  list-style: none;
+  margin: 4em 0;
+}
+
+.header-nav>a {
+  display: inline-block;
+  font-size: 1.15em;
+  margin: 0 1.5em;
+  position: relative;
+  transition: border 0.1s ease, color 0.1s ease;
+  border: 2px solid transparent;
+  color: grey;
+}
+
+.header-nav>a.selected {
+  border-bottom: 2px solid white;
+  color: white;
+}
+
+.header-nav>a:not(.selected):hover {
+  border-bottom: 2px solid grey;
+  color: lightgrey;
+}
+
+#about-link {
+  position: relative;
+}
+
+#about-link:hover>#about-dropdown {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#about-dropdown {
+  position: absolute;
+  width: 10em;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.1s ease, opacity 0.1s ease;
+}
+
+#about-dropdown>a {
+  display: block;
+  margin-top: 0.2em;
+}
+
+.home-holder {
+  position: relative;
+}
+
+.home-img {
+  width: 50em;
+  height: 60em;
+}
+
+.home-content {
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-content>h1 {
+  font-style: italic;
+}
+
+.team-holder {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10em;
+}
+
+.team-member>img {
+  width: 100%;
+  height: 20em;
+}
+
+.team-member {
+  text-align: center;
+  width: 15em;
+}
+
+.contact-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+strong>a {
+  color: #FF8477;
+  text-decoration: underline;
+}
+
+.social-links>a.fa {
+  margin: 0.5em;
+  transition: transform 0.05s ease, color 0.05s ease;
+  color: lightgrey;
+}
+
+.social-links>a.fa:hover {
+  margin: 0.5em;
+  transform: scale(1.2);
+  color: white;
+}
+
+.coming-soon {
+  margin: 2em;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.submission-info {
+  width: 40em;
+  padding: 2em;
+  border: 2px solid dimgrey;
+}
+
+.submission-info>h4 {
+  margin-bottom: 0.7em;
+  margin-top: 0;
+}
+
+.submission-info>ul {
+  padding-left: 2em;
+}
+
+/*.submission-info>ul li {*/
+/*  display: grid;*/
+/*  grid-template-columns: 0 1fr;*/
+/*  grid-gap: 1em;*/
+/*}*/
+
+
+/*.submission-info>ul li::before {*/
+/*  content: '*';*/
+/*  font-size: 1em;*/
+/*  line-height: 1em;*/
+/*  font-weight: bold;*/
+/*  padding-top: 0.3em;*/
+/*  color: darkslategrey;*/
+/*  font-style: italic;*/
+/*}*/
+
+::-moz-selection {
+  background: #FF8477;
+  text-shadow: none;
+}
+
+::selection {
+  background: #FF8477;
+  text-shadow: none;
+}
