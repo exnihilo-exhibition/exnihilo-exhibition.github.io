@@ -141,7 +141,7 @@ body {
   align-items: center;
 }
 
-.contact-grid a {
+a.email {
   color: #FF8477;
   text-decoration: underline;
 }
