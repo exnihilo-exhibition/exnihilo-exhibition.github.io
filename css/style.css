@@ -89,7 +89,7 @@ body {
 
 .home-img {
   width: 50rem;
-  height: auto;
+  height: 50rem;
 }
 
 .home-content {
@@ -141,7 +141,7 @@ body {
   align-items: center;
 }
 
-strong>a {
+.contact-grid a {
   color: #FF8477;
   text-decoration: underline;
 }
@@ -161,7 +161,6 @@ strong>a {
 .coming-soon {
   margin: 2em;
   font-size: 1.5em;
-  font-weight: bold;
   font-style: italic;
 }
 
