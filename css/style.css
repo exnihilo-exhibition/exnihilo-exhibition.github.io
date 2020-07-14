@@ -31,7 +31,7 @@ body {
   top: 0;
   text-align: center;
   width: 100%;
-  font-size: 3em;
+  font-size: 3.1em;
   line-height: 18rem;
 }
 
@@ -87,20 +87,28 @@ body {
 }
 
 .home-img {
-  width: 50em;
-  height: 60em;
+  width: 50rem;
+  height: auto;
 }
 
 .home-content {
   position: absolute;
-  bottom: 1em;
-  left: 1em;
+  bottom: 3rem;
+  left: 3rem;
   display: flex;
   flex-direction: column;
 }
 
+.home-content p {
+  width: 35rem;
+  font-size: 1.0rem;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 .home-content>h1 {
   font-style: italic;
+  margin-bottom: 0.6em;
 }
 
 .team-holder {
