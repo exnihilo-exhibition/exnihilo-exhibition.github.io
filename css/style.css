@@ -33,6 +33,7 @@ body {
   width: 100%;
   font-size: 3.1em;
   line-height: 18rem;
+  font-style: italic;
 }
 
 .header-nav {
@@ -197,4 +198,8 @@ strong>a {
 ::selection {
   background: #FF8477;
   text-shadow: none;
+}
+
+body * {
+  font-weight: initial !important;
 }
