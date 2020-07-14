@@ -128,8 +128,9 @@ body {
 }
 
 .team-member {
-  text-align: center;
   width: 15em;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .team-member>h2 {
