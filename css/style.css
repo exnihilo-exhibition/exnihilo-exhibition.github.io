@@ -41,6 +41,7 @@ body {
 }
 
 .header-nav>a {
+  font-weight: normal;
   display: inline-block;
   font-size: 1.02em;
   margin: 0 1.5em;
@@ -107,6 +108,7 @@ body {
 }
 
 .home-content>h1 {
+  font-weight: normal;
   font-style: italic;
   margin-bottom: 0.6em;
 }
@@ -197,8 +199,4 @@ strong>a {
 ::selection {
   background: #FF8477;
   text-shadow: none;
-}
-
-body * {
-  font-weight: initial !important;
 }
