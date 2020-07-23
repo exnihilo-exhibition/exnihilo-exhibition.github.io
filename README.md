@@ -1,1 +1,1 @@
-# exnihilo-exhibition.github.io
+# exnihiloexhibition.com
