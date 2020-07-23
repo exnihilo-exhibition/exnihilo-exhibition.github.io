@@ -95,18 +95,10 @@ body {
   height: auto;
 }
 
-@media only screen and (max-width: 40rem) {
-  .home-img {
-    width: 50%;
-  }
-  .home-content {
-    font-size: 0.5rem;
-  }
-}
 .home-content {
   position: absolute;
-  bottom: 3rem;
-  left: 3rem;
+  bottom: 3em;
+  left: 3em;
   display: flex;
   flex-direction: column;
 }
@@ -224,3 +216,25 @@ a.email {
   background: #FF8477;
   text-shadow: none;
 }
+
+@media only screen and (max-width: 40rem) {
+  .home-img {
+    width: 100%;
+  }
+
+  .home-content {
+    font-size: 2vw;
+  }
+
+  .submission-info {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .team-member {
+    width: 100%;
+    padding: 0 4em;
+    box-sizing: border-box;
+  }
+}
+
