@@ -1,14 +1,16 @@
 <nav id="header-nav" class="{% if page.nav-fixed %}fixed{% endif %} {% if page.nav-gone %}gone{% endif %}">
-  <div class="logo-holder nb no-border">
+  <div class="logo-holder">
     <img src="img/logo.png" class="logo-img"/>
     <span class="logo-text">EX NIHILO</span>
   </div>
   <a href="/" class="space-above">HOME</a>
   <a class="drop">EXHIBITIONS</a>
   <a class="" href="in_oblivione">IN OBLIVIONE</a>
-  <a class="drop">ABOUT</a>
-  <a href="about" class="">BEYOND THE SCREEN</a>
-  <a href="gallery" class="">THE GALLERY</a>
+  <section class="dropdown">
+    <span>ABOUT</span>
+    <a href="about" class="">BEYOND THE SCREEN</a>
+    <a href="gallery" class="">THE GALLERY</a>
+  </section>
   <a class="">ARTISTS</a>
   <a class="">Contact Us</a>
   <div class="space-above">Copyright &#169; All rights reserved.</div>
@@ -17,3 +19,11 @@
     <a href="{{ site.instagram_link }}" class="fa fa-instagram fa-2x"> </a>
   </div>
 </nav>
+<script>
+  let dropdowns = document.getElementsByClassName("dropdown");
+  for (let dropdown of dropdowns) {
+      dropdown.addEventListener("click", () => {
+        dropdown.classList.toggle("dropped");
+      })
+  }
+</script>
