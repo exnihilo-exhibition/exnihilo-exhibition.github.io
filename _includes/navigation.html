@@ -4,8 +4,10 @@
     <span class="logo-text">EX NIHILO</span>
   </div>
   <a href="/" class="space-above">HOME</a>
-  <a class="drop">EXHIBITIONS</a>
-  <a class="" href="in_oblivione">IN OBLIVIONE</a>
+  <section class="dropdown">
+    <span>EXHIBITIONS</span>
+    <a class="" href="in_oblivione">IN OBLIVIONE</a>
+  </section>
   <section class="dropdown">
     <span>ABOUT</span>
     <a href="about" class="">BEYOND THE SCREEN</a>
@@ -22,8 +24,8 @@
 <script>
   let dropdowns = document.getElementsByClassName("dropdown");
   for (let dropdown of dropdowns) {
-      dropdown.addEventListener("click", () => {
-        dropdown.classList.toggle("dropped");
-      })
+    dropdown.addEventListener("click", () => {
+      dropdown.classList.toggle("dropped");
+    })
   }
 </script>
