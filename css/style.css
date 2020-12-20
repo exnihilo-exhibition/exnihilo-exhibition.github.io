@@ -13,10 +13,6 @@ body {
   align-items: center;
   justify-content: flex-start;
   height: 100%;
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100%;
 }
 
 .under-construction {
@@ -240,6 +236,7 @@ a {
 
 #rotating-clip.shrunk {
   height: 20em;
+  cursor: pointer;
 }
 
 /*.header-nav > a.selected {*/
