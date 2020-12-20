@@ -1,14 +1,19 @@
-<div class="nav-grid">
-  <div class="header-holder">
-    <img src="img/header.png" class="header-img"/>
-    <span class="header-title">EX NIHILO</span>
+<nav id="header-nav" class="{% if page.nav-fixed %}fixed{% endif %} {% if page.nav-gone %}gone{% endif %}">
+  <div class="logo-holder nb no-border">
+    <img src="img/logo.png" class="logo-img"/>
+    <span class="logo-text">EX NIHILO</span>
   </div>
-  <nav class="header-nav">
-    <a href="/" class="{% if page.url == "/" %}selected{% endif %}">Home</a>
-    <a href="/exhibition" class="{% if page.url == "/exhibition.html" %}selected{% endif %}">Exhibition</a>
-    <a href="/catalogue" class="{% if page.url == "/catalogue.html" %}selected{% endif %}">Catalogue</a>
-    <a href="/artists" class="{% if page.url == "/artists.html" %}selected{% endif %}">Artists</a>
-    <a href="/team" class="{% if page.url == "/team.html" %}selected{% endif %}">Team</a>
-    <a href="/contact" class="{% if page.url == "/contact.html" %}selected{% endif %}">Contact</a>
-  </nav>
-</div>
+  <a href="/" class="space-above">HOME</a>
+  <a class="drop">EXHIBITIONS</a>
+  <a class="" href="in_oblivione">IN OBLIVIONE</a>
+  <a class="drop">ABOUT</a>
+  <a href="about" class="">BEYOND THE SCREEN</a>
+  <a href="gallery" class="">THE GALLERY</a>
+  <a class="">ARTISTS</a>
+  <a class="">Contact Us</a>
+  <div class="space-above">Copyright &#169; All rights reserved.</div>
+  <div class="social-links space-above">
+    <a href="{{ site.facebook_link }}" class="fa fa-facebook fa-2x"></a>
+    <a href="{{ site.instagram_link }}" class="fa fa-instagram fa-2x"> </a>
+  </div>
+</nav>
