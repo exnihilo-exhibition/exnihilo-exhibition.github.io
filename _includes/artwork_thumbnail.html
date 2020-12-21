@@ -7,7 +7,7 @@
   {% when "video" %}
   <img class="artwork-img-thumbnail" src="/img/thumb_{{include.work.data}}"/>
   {% when "text" %}
-  <div class="artwork-text-thumbnail">{{ include.work.data | truncate: 300 }}</div>
+  <div class="artwork-text-thumbnail">{{ include.work.data | truncate: 300 | replace: "\\n", '<br>'}}</div>
   {% else %}
   <img class="artwork-img-thumbnail" src="/img/home.png"/>
   {% endcase %}

@@ -4,17 +4,26 @@ title: Artists - EX NIHILO
 ---
 <section class="grid-scroll">
   <h2>ARTISTS</h2>
-  <div class="grid">
-    {% for member in site.data.artists %}
-    {% assign num_works = site.data.artworks | where:'artist',member.name | size %}
-    {% assign work = site.data.artworks | find:'artist',member.name %}
-    <a href="/a/{{ member.name | downcase | replace: ' ', '_' }}" class="grid-item">
+  <div class="split-grid">
+    {% assign grouped_artists = site.data.artists | group_by_exp: "artist", "artist.name | truncate: 1, ''" | sort: 'name' %}
+
+    {% for letter_group in grouped_artists %}
+<!--    <div class="grid-row-end">-</div>-->
+    <div class="grid-split-header">{{letter_group.name}}</div>
+    {% assign sorted_artists = letter_group.items | sort: 'name' %}
+    <div class="grid">
+
+    {% for artist in sorted_artists %}
+    {% assign num_works = site.data.artworks | where:'artist',artist.name | size %}
+    {% assign work = site.data.artworks | find:'artist',artist.name %}
+    <a href="/a/{{ artist.name | downcase | replace: ' ', '_' }}" class="grid-item">
       {% include artwork_thumbnail.html work=work class='grid-item-image' %}
-<!--      <img class="grid-item-image" src="/img/{{ member.image }}"/>-->
-      <span class="grid-item-header">{{ member.name }}</span>
-      <span class="grid-item-subheader">{{ member.nationality }}, {{ member.birth_year }}</span>
-      <span class="grid-item-subheader">{{ num_works }} works in collection</span>
+      <span class="grid-item-header">{{ artist.name }}</span>
+      <span class="grid-item-subheader">{{ artist.nationality }}, {{ artist.birth_year }}</span>
+      <span class="grid-item-subheader">{{ num_works }} works</span>
     </a>
+    {% endfor %}
+    </div>
     {% endfor %}
   </div>
 </section>

@@ -9,11 +9,11 @@ layout: default
     <div class="details">{{ artist_works | size }} works in collection</div>
     <div class="statement">{{ page.artist.statement }}</div>
     <div class="works-header">WORKS BY THIS ARTIST</div>
-    <div class="grid">
+    <div class="grid spread">
     {% for work in artist_works %}
     <!--    <a class="list-artwork" href="/w/{{ work.title | downcase | replace: ' ', '_' }}">-->
     <a class="grid-item" href="/w/{{ work.title | downcase | replace: ' ', '_' }}">
-      {% include artwork_thumbnail.html work=work %}
+      {% include artwork_thumbnail.html work=work class='grid-item-image' %}
       <span class="grid-item-header">{{work.title}}</span>
       <span class="grid-item-subheader">{{work.medium}}</span>
     </a>

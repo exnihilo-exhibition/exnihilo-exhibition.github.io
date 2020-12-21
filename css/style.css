@@ -2,7 +2,6 @@ html {
   font-size: 12px;
   height: 100%;
   margin: 0;
-  line-height: 1;
 }
 
 body {
@@ -495,13 +494,34 @@ a.email {
   margin-bottom: 4em;
 }
 
+.split-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.split-grid > .grid {
+  border-top: 1px solid #ccc;
+}
+
+.grid-split-header {
+  border-top: 1px solid #ccc;
+  padding-right: 6em;
+  /*margin-right: 2em;*/
+  padding-top: 0.5em;
+}
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 10em);
+  grid-template-columns: repeat(auto-fit, 10em);
   gap: 3em 5em;
   width: 100%;
+  justify-content: flex-start;
+  padding: 3em 0 5em;
+}
+
+.grid.spread {
   justify-content: space-between;
-  margin-bottom: 8em;
 }
 
 .grid-item {
@@ -523,7 +543,8 @@ a.email {
 }
 
 .grid-item-subheader {
-  margin-top: 0.6em;
+  color: #ccc;
+  margin-top: 0.2em;
 }
 
 .artist-view {
@@ -561,15 +582,15 @@ a.email {
 /*  gap: 0 3em;*/
 /*}*/
 
-.list-artwork {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  grid-template-columns: auto 1fr;
+/*.list-artwork {*/
+/*  display: grid;*/
+/*  grid-template-rows: auto 1fr;*/
+/*  grid-template-columns: auto 1fr;*/
 
-  width: 50em;
-  gap: 0 3em;
-  margin-bottom: 4em;
-}
+/*  width: 50em;*/
+/*  gap: 0 3em;*/
+/*  margin-bottom: 4em;*/
+/*}*/
 
 .artwork-img-thumbnail {
   width: 100%;
@@ -586,8 +607,8 @@ a.email {
   /*padding: 10%;*/
   box-sizing: border-box;
   text-justify: inter-word;
-  text-align: left;
-  text-align-last: justify;
+  text-align: justify;
+  /*text-align-last: justify;*/
   font-size: 0.6em;
   font-style: italic;
   border: 1.5em solid white;
@@ -597,13 +618,13 @@ a.email {
   overflow: hidden;
 }
 
-.list-artwork > .artwork-thumbnail-container {
-  width: 10em;
-  height: 10em;
-  grid-row: span 2;
-}
+/*.list-artwork > .artwork-thumbnail-container {*/
+/*  width: 10em;*/
+/*  height: 10em;*/
+/*  grid-row: span 2;*/
+/*}*/
 
-.list-artwork > .title {
-  font-weight: bold;
-  margin-bottom: 0.6em;
-}
+/*.list-artwork > .title {*/
+/*  font-weight: bold;*/
+/*  margin-bottom: 0.6em;*/
+/*}*/

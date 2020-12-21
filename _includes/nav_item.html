@@ -3,9 +3,9 @@
 <section class="dropdown {% if has_this_page > 0 %}dropped{% endif %}">
   <span>{{ include.item.text }}</span>
   {% for link in include.item.dropdown %}
-    <a href="{{link.href}}">{{link.text}}</a>
+    <a href="{% link {{ link.href }} %}">{{link.text}}</a>
   {% endfor %}
 </section>
 {% else %}
-<a href="{{include.item.href}}">{{include.item.text}}</a>
+<a href="{% link {{ include.item.href }} %}">{{include.item.text}}</a>
 {% endif %}
