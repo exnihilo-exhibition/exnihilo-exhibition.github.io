@@ -254,8 +254,24 @@ a {
 }
 
 #rotating-clip {
-  height: 50em;
   transition: height 1.5s ease;
+}
+
+@media (min-aspect-ratio: 7/5) {
+  #rotating-clip {
+    height: 60vh;
+  }
+}
+
+@media (max-aspect-ratio: 3/2) {
+  #rotating-clip {
+    height: 40vw;
+  }
+}
+
+#rotating-clip.shrunk {
+  height: 25vh;
+  cursor: pointer;
 }
 
 #nav-spacer {
@@ -263,10 +279,6 @@ a {
   width: 0;
 }
 
-#rotating-clip.shrunk {
-  height: 20em;
-  cursor: pointer;
-}
 
 /*.header-nav > a.selected {*/
 /*  border-bottom: 2px solid white;*/
@@ -484,20 +496,16 @@ a.email {
 }
 
 .grid {
-  display: flex;
-  flex-flow: row wrap;
-  gap: 3em 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 10em);
+  gap: 3em 5em;
   width: 100%;
   justify-content: space-between;
-}
-
-.grid::after {
-  content: '';
-  flex: auto;
+  margin-bottom: 8em;
 }
 
 .grid-item {
-  margin-right: 5em;
+  /*margin-right: 5em;*/
   width: 10em;
   display: flex;
   flex-direction: column;
@@ -523,7 +531,7 @@ a.email {
   flex-direction: column;
   align-items: center;
   margin: 15vh 10vh 10vh;
-  width: 70em;
+  width: 40vw;
 }
 
 .artist-view > .name {
@@ -536,8 +544,8 @@ a.email {
 }
 
 .artist-view > .statement {
-  margin: 6em 0 6em;
-  width: 60em;
+  margin: 4em 0 8em;
+  width: 80%;
   text-justify: inter-word;
   text-align: justify;
   text-align-last: left;

@@ -3,25 +3,9 @@
     <img src="/img/logo.png" class="logo-img"/>
     <span class="logo-text">EX NIHILO</span>
   </div>
-  <a href="/new_home" class="space-above">HOME</a>
-  <section class="dropdown">
-    <span>EXHIBITIONS</span>
-    <a href="/in_oblivione">IN OBLIVIONE</a>
-  </section>
-  <section class="dropdown">
-    <span>PERSPECTIVES</span>
-    <a href="/listening">The Art of Listening</a>
-    <a href="/art_of_listening">The Art of Listening</a>
-  </section>
-  <section class="dropdown">
-    <span>ABOUT</span>
-    <a href="/mission">Ethos & Mission</a>
-    <a href="/about">Team</a>
-    <a href="/gallery">The Gallery</a>
-  </section>
-  <a href="/collection">THE COLLECTION</a>
-  <a href="/artists">ARTISTS</a>
-  <a href="/contact">Contact Us</a>
+  {% for item in site.data.nav %}
+  {% include nav_item.html item=item %}
+  {% endfor %}
   <div class="space-above">Copyright &#169; All rights reserved.</div>
   <div class="social-links space-above">
     <a href="{{ site.facebook_link }}" class="fa fa-facebook fa-2x"></a>

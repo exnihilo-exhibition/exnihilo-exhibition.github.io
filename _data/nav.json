@@ -1,0 +1,53 @@
+[
+  {
+    "text": "HOME",
+    "href": "/"
+  },
+  {
+    "text": "EXHIBITIONS",
+    "dropdown": [
+      {
+        "text": "IN OBLIVIONE",
+        "href": "in_oblivione.html"
+      }
+    ]
+  },
+  {
+    "text": "PERSPECTIVES",
+    "dropdown": [
+      {
+        "text": "The Art of Listening",
+        "href": "art_of_listening.html"
+      }
+    ]
+  },
+  {
+    "text": "ABOUT",
+    "dropdown": [
+      {
+        "text": "Ethos & Mission",
+        "href": "mission.html"
+      },
+      {
+        "text": "Team",
+        "href": "team.html"
+      },
+      {
+        "text": "The Gallery",
+        "href": "gallery.html"
+      }
+    ]
+  },
+  {
+    "text": "THE COLLECTION",
+    "href": "collection.html"
+  },
+  {
+    "text": "ARTISTS",
+    "href": "artists.html"
+  },
+  {
+    "text": "Contact Us",
+    "href": "contact.html"
+  }
+]
