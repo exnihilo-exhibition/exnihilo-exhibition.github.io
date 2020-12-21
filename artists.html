@@ -6,9 +6,11 @@ title: Artists - EX NIHILO
   <h2>ARTISTS</h2>
   <div class="grid">
     {% for member in site.data.artists %}
-    {% assign num_works = site.data.artworks | where:"artist",member.name | size %}
-    <a href="/artists/{{ member.name | downcase | replace: " ", "_" }}" class="artist-grid-item">
-      <img class="grid-item-image" src="/img/{{ member.image }}"/>
+    {% assign num_works = site.data.artworks | where:'artist',member.name | size %}
+    {% assign work = site.data.artworks | find:'artist',member.name %}
+    <a href="/a/{{ member.name | downcase | replace: ' ', '_' }}" class="grid-item">
+      {% include artwork_thumbnail.html work=work class='grid-item-image' %}
+<!--      <img class="grid-item-image" src="/img/{{ member.image }}"/>-->
       <span class="grid-item-header">{{ member.name }}</span>
       <span class="grid-item-subheader">{{ member.nationality }}, {{ member.birth_year }}</span>
       <span class="grid-item-subheader">{{ num_works }} works in collection</span>

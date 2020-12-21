@@ -1,0 +1,14 @@
+<div class="artwork-thumbnail-container {{include.class}}">
+  {% case include.work.type %}
+  {% when "image" %}
+  <img class="artwork-img-thumbnail" src="/img/{{include.work.data}}"/>
+  {% when "audio" %}
+  <img class="artwork-img-thumbnail" src="/img/poster.png"/>
+  {% when "video" %}
+  <img class="artwork-img-thumbnail" src="/img/thumb_{{include.work.data}}"/>
+  {% when "text" %}
+  <div class="artwork-text-thumbnail">{{ include.work.data | truncate: 300 }}</div>
+  {% else %}
+  <img class="artwork-img-thumbnail" src="/img/home.png"/>
+  {% endcase %}
+</div>
