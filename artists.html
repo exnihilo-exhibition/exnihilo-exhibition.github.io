@@ -2,13 +2,17 @@
 layout: default
 title: Artists - EX NIHILO
 ---
-<section id="artists-grid">
-  {% for member in site.data.artists %}
-    <a href="{{page.artist_}}" class="artist-grid-item">
-      <img class="artist-grid-item-image" src="img/{{ member.image }}"/>
-      <span class="artist-grid-item-header">{{ member.name }}</span>
-      <span class="artist-grid-item-subheader">{{ member.nationality }}, {{ 2020 | minus: member.birth_year }}</span>
-      <span class="artist-grid-item-subheader">{{ site.data.artworks | where:"artist",member.name | size }} works in collection</span>
+<section class="grid-scroll">
+  <h2>ARTISTS</h2>
+  <div class="grid">
+    {% for member in site.data.artists %}
+    {% assign num_works = site.data.artworks | where:"artist",member.name | size %}
+    <a href="/artists/{{ member.name | downcase | replace: " ", "_" }}" class="artist-grid-item">
+      <img class="grid-item-image" src="/img/{{ member.image }}"/>
+      <span class="grid-item-header">{{ member.name }}</span>
+      <span class="grid-item-subheader">{{ member.nationality }}, {{ member.birth_year }}</span>
+      <span class="grid-item-subheader">{{ num_works }} works in collection</span>
     </a>
-  {% endfor %}
+    {% endfor %}
+  </div>
 </section>

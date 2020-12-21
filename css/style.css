@@ -218,12 +218,14 @@ a {
 }
 
 .scroll-box {
+  padding: 10vh;
+  box-sizing: border-box;
   height: 100vh;
   flex-grow: 1;
   display: flex;
   align-items: center;
   flex-direction: column;
-  /*overflow-y: auto;*/
+  overflow-y: auto;
 }
 
 .scroll-box > h2 {
@@ -243,11 +245,11 @@ a {
 }
 
 .poster {
-  margin: 10vh 0;
+  margin: 0 0 10vh;
   height: 110vh;
 }
 
-.zoom-clip {
+#zoom-clip {
   margin: 8em 0;
   width: 110vh;
 }
@@ -468,32 +470,46 @@ a.email {
   }
 }
 
-#artists-grid {
-  padding-left: 10em;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 10em);
-  /*grid-gap:*/
+.grid-scroll {
+  padding: 10em;
+  box-sizing: border-box;
+  flex-grow: 1;
+  overflow-y: auto;
   width: 60vw;
-  /*justify-self: flex-end;*/
-  grid-gap: 3em;
+  height: 100vh;
+}
+
+.grid-scroll > h2 {
+  /*text-align: center;*/
+  margin-bottom: 4em;
+}
+
+.grid {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 3em 0;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .artist-grid-item {
+  margin-right: 5em;
+  width: 10em;
   display: flex;
   flex-direction: column;
 }
 
-.artist-grid-item-image {
+.grid-item-image {
   width: 10em;
   height: 10em;
   object-fit: cover;
 }
 
-.artist-grid-item-header {
+.grid-item-header {
   margin-top: 1em;
   font-weight: bold;
 }
 
-.artist-grid-item-subheader {
+.grid-item-subheader {
   margin-top: 0.6em;
 }

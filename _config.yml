@@ -6,11 +6,13 @@ instagram_link: https://www.instagram.com/art_ex_nihilo/
 
 plugins:
   - jekyll-datapage-generator
-page_gen-dirs: true
+  - jekyll_picture_tag
+
+page_gen-dirs: false
 page_gen:
   - data: artists
     template: artist_page
     dir: artists
-    name_expr: record['name'].downcase
-    title_expr: record['name'] + " - EX NIHILO"
-    page_data_prefix: artist_
+    name_expr: record['name'].downcase.gsub(" ", "_")
+    title_expr: record['name'] + ' - EX NIHILO'
+    page_data_prefix: artist

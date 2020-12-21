@@ -1,4 +1,29 @@
 ---
 layout: default
-title: Contact Us - EX NIHILO
 ---
+{% assign artist_works = site.data.artworks | where:"artist",page.artist.name %}
+<!--{{ site.data.artists | map: "name" | join: '<br>' }}-->
+<!--{{ artist_works }}-->
+<!--{{ site.data.artworks }}-->
+<!--{{ site.data.artworks | where:"artist",page.artist.name }}-->
+<div class="scroll-box">
+  <div class="artist-view">
+    <div class="artist-name">{{page.artist.name | upcase}}</div>
+    <div class="artist-details">{{page.artist.nationality}}, {{page.artist.birth_year}}</div>
+    <div class="artist-details">{{ artist_works | size }} works in collection</div>
+    <div class="artist-statement">{{ page.artist.statement }}</div>
+    {% for work in artist_works %}
+    <div class="artist-artwork">
+      {% case work.type %}
+      {% when "image" %}
+      <img class="thumbnail" src="img/{{ page.artist.data }}"/>
+      {% when "audio" %}
+      This is a cookie
+      {% else %}
+      This is not a cake nor a cookie
+      {% endcase %}
+    </div>
+    {% endfor %}
+  </div>
+
+</div>
