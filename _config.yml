@@ -3,3 +3,14 @@ submissions_email: exnihilo.submissions@gmail.com
 contact_email: exnihilo.exhibition@gmail.com
 facebook_link: https://www.facebook.com/Ex-Nihilo-113483780439979
 instagram_link: https://www.instagram.com/art_ex_nihilo/
+
+plugins:
+  - jekyll-datapage-generator
+page_gen-dirs: true
+page_gen:
+  - data: artists
+    template: artist_page
+    dir: artists
+    name_expr: record['name'].downcase
+    title_expr: record['name'] + " - EX NIHILO"
+    page_data_prefix: artist_

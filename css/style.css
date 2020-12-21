@@ -2,6 +2,7 @@ html {
   font-size: 12px;
   height: 100%;
   margin: 0;
+  line-height: 1;
 }
 
 body {
@@ -97,20 +98,17 @@ a {
   font-size: 1em;
   margin-left: 5em;
   line-height: 1;
-  /*margin-right: 10em;*/
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 2em;
+  justify-content: flex-start;
+  padding: 20vh 2em 0;
   box-sizing: border-box;
   opacity: 1;
   transition: opacity 1.5s ease;
-  /*animation-duration: 3s;*/
-  /*animation-name: header-fade;*/
+  height: 100vh;
 }
 
 #header-nav.fixed {
-  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
@@ -119,7 +117,6 @@ a {
 #header-nav.bookmark {
   /*bookmark vibe*/
   background-color: rgba(0, 0, 0, 0.3);
-  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
@@ -131,7 +128,7 @@ a {
 }
 
 #header-nav a:hover {
-  color: #ff2424;
+  color: #EE0006;
 }
 
 .dropdown {
@@ -191,15 +188,25 @@ a {
   margin-right: 0.5em;
 }
 
+.gallery > *:last-child {
+  margin-right: 0;
+}
+
 .gallery > img {
   height: 80vh;
   margin-right: 0.5em;
 }
 
-.gallery > p {
+.gallery > section {
   width: 40em;
   padding: 0 6em;
-  /*box-sizing: border-box;*/
+}
+
+.gallery > section > h2 {
+  text-align: center;
+}
+
+.gallery p {
   text-align: justify;
   text-justify: inter-word;
 }
@@ -338,20 +345,38 @@ a {
   margin-bottom: 3em;
 }
 
-.team-member > h2 {
+h2 {
   font-size: 1em;
   line-height: 1;
+  margin: 0;
+}
+
+.team-member > h2 {
   margin: 1em 0 0.6em 0;
 }
 
 .contact-grid {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  /*flex-direction: column;*/
+  margin-left: 10em;
+  grid-template-columns: 30em;
+  gap: 3em;
+  /*flex-grow: 1;*/
+  /*align-items: center;*/
+}
+
+.contact-grid h2 {
+  margin-bottom: 0.6em;
+}
+
+.contact-grid p {
+  text-align: justify;
+  text-justify: inter-word;
+  margin-top: 0.6em;
 }
 
 a.email {
-  color: #FF8477;
+  color: #EE0006;
   text-decoration: underline;
 }
 
@@ -443,3 +468,32 @@ a.email {
   }
 }
 
+#artists-grid {
+  padding-left: 10em;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 10em);
+  /*grid-gap:*/
+  width: 60vw;
+  /*justify-self: flex-end;*/
+  grid-gap: 3em;
+}
+
+.artist-grid-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.artist-grid-item-image {
+  width: 10em;
+  height: 10em;
+  object-fit: cover;
+}
+
+.artist-grid-item-header {
+  margin-top: 1em;
+  font-weight: bold;
+}
+
+.artist-grid-item-subheader {
+  margin-top: 0.6em;
+}

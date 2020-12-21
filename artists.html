@@ -2,4 +2,13 @@
 layout: default
 title: Artists - EX NIHILO
 ---
-{% include submission_info.html %}
+<section id="artists-grid">
+  {% for member in site.data.artists %}
+    <a href="{{page.artist_}}" class="artist-grid-item">
+      <img class="artist-grid-item-image" src="img/{{ member.image }}"/>
+      <span class="artist-grid-item-header">{{ member.name }}</span>
+      <span class="artist-grid-item-subheader">{{ member.nationality }}, {{ 2020 | minus: member.birth_year }}</span>
+      <span class="artist-grid-item-subheader">{{ site.data.artworks | where:"artist",member.name | size }} works in collection</span>
+    </a>
+  {% endfor %}
+</section>
