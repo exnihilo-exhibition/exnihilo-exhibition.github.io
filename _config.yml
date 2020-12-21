@@ -6,7 +6,7 @@ instagram_link: https://www.instagram.com/art_ex_nihilo/
 
 plugins:
   - jekyll-datapage-generator
-  - jekyll_picture_tag
+#  - jekyll_picture_tag
 
 page_gen-dirs: false
 page_gen:
