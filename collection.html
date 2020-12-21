@@ -6,8 +6,6 @@ title: Collection - EX NIHILO
   <h2>ARTWORKS</h2>
   <div class="grid">
     {% for work in site.data.artworks %}
-<!--    {% assign num_works = site.data.artworks | where:'artist',artist.name | size %}-->
-<!--    {% assign work = site.data.artworks | find:'artist',artist.name %}-->
     <a href="/w/{{ work.title | downcase | replace: ' ', '_' }}" class="grid-item">
       {% include artwork_thumbnail.html work=work class='grid-item-image' %}
       <span class="grid-item-header">{{ work.title }}</span>

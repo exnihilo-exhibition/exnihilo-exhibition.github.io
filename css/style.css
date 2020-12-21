@@ -105,6 +105,7 @@ a {
   opacity: 1;
   transition: opacity 1.5s ease;
   height: 100vh;
+  user-select: none;
 }
 
 #header-nav.fixed {

@@ -8,7 +8,6 @@ title: Artists - EX NIHILO
     {% assign grouped_artists = site.data.artists | group_by_exp: "artist", "artist.name | truncate: 1, ''" | sort: 'name' %}
 
     {% for letter_group in grouped_artists %}
-<!--    <div class="grid-row-end">-</div>-->
     <div class="grid-split-header">{{letter_group.name}}</div>
     {% assign sorted_artists = letter_group.items | sort: 'name' %}
     <div class="grid">
