@@ -16,8 +16,8 @@ html {
   /*--selection: #FF8477;*/
 
   /*white*/
-  --scrollbarBG: #111111;
-  --thumbBG: #222222;
+  --scrollbarBG: #eeeeee;
+  --thumbBG: #dddddd;
   --bg: white;
   --bg-translucent: rgba(255, 255, 255, 0.3);
   --nav-hover: #EE0006;
