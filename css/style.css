@@ -26,6 +26,7 @@ html {
   --selection: #FF8477;
   --text-thumbnail-bg: #eee;
   --text-thumbnail-text: #555;
+  --thumbnail-size: 15rem;
 }
 
 a {
@@ -40,8 +41,9 @@ a {
 *::-webkit-scrollbar-track {
   background: var(--scrollbarBG);
 }
+
 *::-webkit-scrollbar-thumb {
-  background-color: var(--thumbBG) ;
+  background-color: var(--thumbBG);
   border-radius: 6px;
   border: 3px solid var(--scrollbarBG);
 }
@@ -393,13 +395,15 @@ h2 {
 }
 
 .contact-grid {
-  display: grid;
-  /*flex-direction: column;*/
+  display: flex;
   margin-left: 10em;
-  grid-template-columns: 30em;
-  gap: 3em;
-  /*flex-grow: 1;*/
-  /*align-items: center;*/
+  flex-flow: column wrap;
+  height: 40em;
+  gap: 3em 12em;
+}
+
+.contact-grid > div {
+  width: 30em;
 }
 
 .contact-grid h2 {
@@ -439,28 +443,10 @@ a.email {
 }
 
 @media only screen and (max-width: 40rem) {
-  .home-img {
-    width: 100%;
-  }
-
-  .home-content {
-    font-size: 2vw;
-  }
-
-  .submission-info {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .team-member {
-    width: 100%;
-    padding: 0 4em;
-    box-sizing: border-box;
-  }
 }
 
 .grid-scroll {
-  padding: 10em;
+  padding: 10em 6em 10em 6em;
   box-sizing: border-box;
   flex-grow: 1;
   overflow-y: auto;
@@ -482,7 +468,7 @@ a.email {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 10em);
+  grid-template-columns: repeat(auto-fit, var(--thumbnail-size));
   gap: 3em 5em;
   width: 100%;
   justify-content: flex-start;
@@ -506,14 +492,14 @@ a.email {
 
 .grid-item {
   /*margin-right: 5em;*/
-  width: 10em;
+  width: var(--thumbnail-size);
   display: flex;
   flex-direction: column;
 }
 
 .grid-item-image {
-  width: 10em;
-  height: 10em;
+  width: var(--thumbnail-size);
+  /*height: 10em;*/
   object-fit: cover;
 }
 
@@ -532,7 +518,6 @@ a.email {
   flex-direction: column;
   align-items: center;
   margin: 15vh 10vh 10vh;
-  width: 40vw;
 }
 
 .artist-view > .name {
@@ -545,43 +530,55 @@ a.email {
 }
 
 .artist-view > .statement {
-  margin: 4em 0 8em;
-  width: 80%;
+  margin: 4em 0 3em;
+  /*width: 80%;*/
   text-justify: inter-word;
   text-align: justify;
   text-align-last: left;
+  width: 60em;
 }
 
-.artist-view > .works-header {
+.artist-view > .header {
   font-weight: bold;
-  margin-bottom: 3em;
+  margin: 5em 0 3em;
 }
 
-/*.artist-works-list {*/
-/*  display: flex;*/
-/*  gap: 0 3em;*/
-/*}*/
+.artist-works-list {
+  width: 80em;
+  display: flex;
+  flex-direction: column;
+  gap: 7em;
+}
 
-/*.list-artwork {*/
-/*  display: grid;*/
-/*  grid-template-rows: auto 1fr;*/
-/*  grid-template-columns: auto 1fr;*/
+.list-artwork {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  grid-template-columns: auto 1fr;
+  width: 100%;
 
-/*  width: 50em;*/
-/*  gap: 0 3em;*/
-/*  margin-bottom: 4em;*/
-/*}*/
+  gap: 0 3em;
+  --thumbnail-size: 35rem;
+}
+
+.list-artwork > .artwork-thumbnail-container {
+  grid-row: span 3;
+}
+
+.list-artwork > .title {
+  font-weight: bold;
+}
 
 .artwork-img-thumbnail {
-  width: 100%;
-  height: 100%;
+  width: var(--thumbnail-size);
+  height: auto;
+  /*height: 100%;*/
   object-fit: contain;
 }
 
 .artwork-text-thumbnail {
   background: var(--text-thumbnail-bg);
-  width: 100%;
-  height: 100%;
+  width: var(--thumbnail-size);
+  height: var(--thumbnail-size);
   overflow: hidden;
   color: var(--text-thumbnail-text);
   /*padding: 10%;*/
@@ -596,6 +593,10 @@ a.email {
 
 .artwork-thumbnail-container {
   overflow: hidden;
+}
+
+.scroll-bottom-spacer {
+  height: 8em;
 }
 
 /*.list-artwork > .artwork-thumbnail-container {*/
