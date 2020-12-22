@@ -294,10 +294,12 @@ a {
 #zoom-clip {
   margin: 8em 0;
   width: 110vh;
+  filter: invert(100%);
 }
 
 #rotating-clip {
   transition: height 1.5s ease;
+  filter: invert(100%);
 }
 
 @media (min-aspect-ratio: 7/5) {
